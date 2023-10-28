@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #85a7b1;
+}
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+}
+.calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px #ffffff solid;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+}
+.calculator > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.span-2 {
+    grid-column: span 2;
+}
+.result {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    padding: 1.5rem;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    flex-direction: column;
+}
+.pre-input {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5em;
+}
+.post-input {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2em;
+}
